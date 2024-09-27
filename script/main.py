@@ -16,8 +16,8 @@ service = Service(chrome_driver_path)
 options = webdriver.ChromeOptions()
 driver = webdriver.Chrome(service=service, options=options)
 
-# Abrir a página onde os campos serão preenchidos
-driver.get('file:///home/crija/Desktop/automatizar_preenchimento_fomulario/formulario.html')
+# Caminho  para abrir a página de login
+driver.get('')
 
 # Esperar um tempo para a página carregar
 time.sleep(1)
@@ -40,6 +40,7 @@ for index, row in df.iterrows():
     telefone_input.send_keys(row['Telefone'])
 
     # Tempo que a página ficará aberta
-    time.sleep(2)
+
+time.sleep(4)
 
 driver.quit()
